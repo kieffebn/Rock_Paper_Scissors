@@ -15,9 +15,9 @@ public class RockPaperScissorsFrame extends JFrame
     ImageIcon paperIcon = new ImageIcon("src/rock.png");
     ImageIcon scissorsIcon = new ImageIcon("src/rock.png");
     JLabel titleLbl = new JLabel("Rock Paper Scissors!",JLabel.CENTER);
-    JLabel playerWins = new JLabel("Player Wins: ");
-    JLabel cpuWins = new JLabel("CPU Wins: ");
-    JLabel ties = new JLabel("Ties: ");
+    JLabel playerWins = new JLabel("Player Wins: 0");
+    JLabel cpuWins = new JLabel("CPU Wins: 0");
+    JLabel ties = new JLabel("Ties: 0");
 
 
     JButton quitBtn = new JButton("Quit");
@@ -38,7 +38,7 @@ public class RockPaperScissorsFrame extends JFrame
 
     private void cpuRandom() {
         Random rnd = new Random();
-         storedValue.cpuChoice = rnd.nextInt(2);
+         storedValue.cpuChoice = rnd.nextInt(3);
     }
 
     public RockPaperScissorsFrame()
