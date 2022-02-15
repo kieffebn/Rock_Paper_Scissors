@@ -11,19 +11,21 @@ public class RockPaperScissorsFrame extends JFrame
     JPanel controlPnl = new JPanel();
     JPanel histPnl = new JPanel();
     JPanel statPnl = new JPanel();
-    ImageIcon icon = new ImageIcon("src/ball.png");
-    JLabel titleLbl = new JLabel("Rock Paper Scissors!",icon, JLabel.CENTER);
+    ImageIcon rockIcon = new ImageIcon("src/rock.png");
+    ImageIcon paperIcon = new ImageIcon("src/rock.png");
+    ImageIcon scissorsIcon = new ImageIcon("src/rock.png");
+    JLabel titleLbl = new JLabel("Rock Paper Scissors!",JLabel.CENTER);
     JLabel playerWins = new JLabel("Player Wins: ");
     JLabel cpuWins = new JLabel("CPU Wins: ");
     JLabel ties = new JLabel("Ties: ");
 
 
     JButton quitBtn = new JButton("Quit");
-    JButton scissorsBtn = new JButton("Scissors!");
-    JButton paperBtn = new JButton("Paper!");
-    JButton rockBtn = new JButton("Rock!");
+    JButton scissorsBtn = new JButton(scissorsIcon);
+    JButton paperBtn = new JButton(paperIcon);
+    JButton rockBtn = new JButton(rockIcon);
 
-    JTextArea histDisplayArea = new JTextArea(20, 40);
+    JTextArea histDisplayArea = new JTextArea(12, 40);
     JScrollPane scroller = new JScrollPane(histDisplayArea);
 
 
@@ -45,13 +47,13 @@ public class RockPaperScissorsFrame extends JFrame
         titleLbl.setVerticalTextPosition(JLabel.BOTTOM);
         titleLbl.setHorizontalTextPosition(JLabel.CENTER);
         histDisplayArea.setFont(new Font("Arial", Font.PLAIN, 16));
-        quitBtn.setFont(new Font("Sans Serif", Font.BOLD, 12));
-        rockBtn.setFont(new Font("Sans Serif", Font.BOLD, 12));
-        paperBtn.setFont(new Font("Sans Serif", Font.BOLD, 12));
-        scissorsBtn.setFont(new Font("Sans Serif", Font.BOLD, 12));
+        quitBtn.setFont(new Font("Sans Serif", Font.BOLD, 24));
+        playerWins.setFont(new Font("Arial", Font.PLAIN, 16));
+        cpuWins.setFont(new Font("Arial", Font.PLAIN, 16));
+        ties.setFont(new Font("Arial", Font.PLAIN, 16));
 
         setTitle("Rock Paper Scissors");
-        setSize(800, 500);
+        setSize(1000, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         createGUI();
